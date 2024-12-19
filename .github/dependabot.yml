@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # Maintain dependencies for backend
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      all:
+        patterns: ["*"]
+
+  # maintain dependencies for github actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      all:
+        patterns: ["*"]
